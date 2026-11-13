@@ -1,7 +1,0 @@
-[
-  {
-    "id": "sample",
-    "label": "Synthetic stress-test sample (999 requests, 120 IPs)",
-    "file": "data/ip_scores_sample.csv"
-  }
-]

@@ -1,18 +1,7 @@
 ```js
-// The list of datasets shown in the dashboard lives in datasets.config.json
-// (id, label, file). Observable Framework resolves file dependencies by
-// statically scanning the source for literal FileAttachment("...") calls, so
-// a path read out of a JSON config at runtime can't become a FileAttachment
-// by itself — FILES below is the literal registry Framework can see. To add
-// a new dataset: run score_bot_ips.py to produce `ip_scores_<name>.csv`,
-// symlink it into docs/data/, add a literal entry to FILES, and add a
-// matching entry to datasets.config.json.
-const FILES = {
-  "data/ip_scores_sample.csv": FileAttachment("data/ip_scores_sample.csv"),
-};
-
-const datasetConfig = await FileAttachment("datasets.config.json").json();
-const DATASETS = datasetConfig.map((d) => ({...d, file: FILES[d.file]}));
+// The list of datasets shown in the dashboard lives in datasets.js — see that
+// file for why it can't just be a JSON config.
+import {DATASETS} from "./datasets.js";
 
 const loaded = new Map(await Promise.all(
   DATASETS.map(async (d) => [d.id, await d.file.csv({typed: true})])
