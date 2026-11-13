@@ -8,12 +8,24 @@ Scores every IP address in a web access log (CSV) for bot-like behaviour.
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
-python3 score_bot_ips.py synthetic_stress_log_sample.csv --out ip_scores_sample.csv
+python3 score_bot_ips.py synthetic_log_sample.csv --out ip_scores_sample.csv
 ```
 
-This reads `synthetic_stress_log_sample.csv` (a 1,000-line sample log) and writes
+This reads `synthetic_log_sample.csv` (a 1,000-line sample log) and writes
 `ip_scores_sample.csv`, one row per IP with a bot score (0-5), a label, and the
 reasons behind it.
+
+## Producing the CSV from a web server log
+
+`score_bot_ips.py` expects a CSV with columns `row_id, timestamp, ip, method,
+path, status, bytes_sent, user_agent, referrer`. `parse_apache_log.py`
+converts an Apache/Nginx "vhost combined" access log into that format:
+
+```bash
+python3 parse_apache_log.py web_server_access.log --out access_log.csv
+```
+
+Then run `score_bot_ips.py` on the resulting CSV as in Quick start above.
 
 ## Python/matplotlib graphs generator
 

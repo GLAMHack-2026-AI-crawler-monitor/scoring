@@ -3,7 +3,7 @@
 !*.py
 !requirements.txt
 !.gitignore
-!synthetic_stress_log_sample.csv
+!synthetic_log_sample.csv
 !ip_scores_sample.csv
 
 # dashboard source (node_modules, dist and the .observablehq cache stay
