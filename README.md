@@ -1,4 +1,4 @@
-# scoring
+# Web server access log user/bot scoring
 
 Scores every IP address in a web access log (CSV) for bot-like behaviour.
 
