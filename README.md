@@ -31,3 +31,15 @@ npm run build     # static site in dashboard/dist/
 ```
 
 See section 11 of `BOT_SCORING_NOTES.md` for how to add more datasets.
+
+## Python/matplotlib dashboard
+
+`plot_ip_scores.py` is a lightweight, no-Node.js alternative to `dashboard/`.
+It reads a `score_bot_ips.py` output CSV and steps through the same charts
+(summary cards, score distribution, requests vs. score, request mosaic) one
+at a time: close a window to see the next one.
+
+```bash
+python3 plot_ip_scores.py ip_scores_sample.csv
+python3 plot_ip_scores.py ip_scores_sample.csv --save-dir plots/   # save PNGs instead
+```
