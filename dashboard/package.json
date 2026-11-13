@@ -1,0 +1,13 @@
+{
+  "name": "bot-scoring-dashboard",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "observable preview",
+    "build": "observable build",
+    "deploy": "observable deploy"
+  },
+  "dependencies": {
+    "@observablehq/framework": "^1"
+  }
+}

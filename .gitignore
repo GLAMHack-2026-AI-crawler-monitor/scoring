@@ -4,3 +4,16 @@
 !requirements.txt
 !.gitignore
 !synthetic_stress_log_sample.csv
+!ip_scores_sample.csv
+
+# dashboard source (node_modules, dist and the .observablehq cache stay
+# ignored since they still match the blanket "*" above)
+!dashboard
+!dashboard/package.json
+!dashboard/package-lock.json
+!dashboard/observablehq.config.js
+!dashboard/docs
+!dashboard/docs/index.md
+!dashboard/docs/datasets.config.json
+!dashboard/docs/data
+!dashboard/docs/data/ip_scores_sample.csv
