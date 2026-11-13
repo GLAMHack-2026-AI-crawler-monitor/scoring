@@ -3,3 +3,4 @@
 !*.py
 !requirements.txt
 !.gitignore
+!synthetic_stress_log_sample.csv
