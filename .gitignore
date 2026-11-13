@@ -14,6 +14,6 @@
 !dashboard/observablehq.config.js
 !dashboard/docs
 !dashboard/docs/index.md
-!dashboard/docs/datasets.config.json
+!dashboard/docs/datasets.js
 !dashboard/docs/data
 !dashboard/docs/data/ip_scores_sample.csv
