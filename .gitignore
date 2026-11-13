@@ -3,8 +3,10 @@
 !*.py
 !requirements.txt
 !.gitignore
-!synthetic_log_sample.csv
-!ip_scores_sample.csv
+!src
+!data
+!data/synthetic_log_sample.csv
+!data/ip_scores_sample.csv
 
 # dashboard source (node_modules, dist and the .observablehq cache stay
 # ignored since they still match the blanket "*" above)

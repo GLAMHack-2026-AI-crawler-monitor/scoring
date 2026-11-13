@@ -9,7 +9,7 @@ so the result has more unique IPs than a plain concatenation would (worse
 case for the per-IP groupby than just repeating the same 121 addresses).
 
 Usage:
-  python3 generate_synthetic_log.py --out synthetic_stress_log.csv --target-bytes 1100000000
+  python3 src/generate_synthetic_log.py --out data/synthetic_stress_log.csv --target-bytes 1100000000
 """
 import argparse
 import os

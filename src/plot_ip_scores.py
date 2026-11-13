@@ -5,8 +5,8 @@ Reads a score_bot_ips.py output CSV and steps through the same charts one at
 a time: close a window (or press q) to see the next one.
 
 Usage:
-  python3 plot_ip_scores.py ip_scores_sample.csv
-  python3 plot_ip_scores.py ip_scores_sample.csv --save-dir plots/   # save PNGs instead of opening windows
+  python3 src/plot_ip_scores.py data/ip_scores_sample.csv
+  python3 src/plot_ip_scores.py data/ip_scores_sample.csv --save-dir plots/   # save PNGs instead of opening windows
 
 Requires: matplotlib, pandas, numpy
 """

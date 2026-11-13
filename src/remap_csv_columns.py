@@ -6,7 +6,7 @@ CSV but use different column names. Keeps COLUMNS in score_bot_ips.py
 untouched, so one dataset's naming doesn't break the others.
 
 Usage:
-  python3 remap_csv_columns.py eclog_1day.csv --out eclog_1day_mapped.csv \
+  python3 src/remap_csv_columns.py eclog_1day.csv --out eclog_1day_mapped.csv \
       --map ip=IpId --map path=Uri --map status=ResponseCode \
       --map user_agent=UserAgent --map referrer=Referrer
 """
