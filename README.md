@@ -6,7 +6,7 @@ This project was developed as part of the GLAMhack 2026 challenge “Crawler Mon
 
 Scores every IP address in a web access log (CSV) for bot-like behaviour.
 
-Browse the demo datasets in the live demo dashboard: [bot-detection.github.io/scoring/](https://glamhack-2026-ai-crawler-monitor.github.io/scoring/)  
+Browse the demo datasets in the live demo dashboard: [glamhack-2026-ai-crawler-monitor.github.io/scoring/](https://glamhack-2026-ai-crawler-monitor.github.io/scoring/)  
 
 ## Quick start
 
