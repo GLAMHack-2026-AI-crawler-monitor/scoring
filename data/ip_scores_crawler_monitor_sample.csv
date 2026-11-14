@@ -1,0 +1,158 @@
+ip,requests,score,label,reasons,flag_ua,flag_long,flag_noref,flag_slowdown,flag_onething,crawler_names,max_params,long_requests,referrer_share,slowdown_share,top_type,top_type_share,read_robots_txt
+203.0.113.1,136,4,likely bot,136 absurdly long requests (up to 76 parameters); no referrer on any of 136 requests; 32% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,136,0.0,0.316,discover,1.0,False
+203.0.113.11,121,4,likely bot,121 absurdly long requests (up to 76 parameters); no referrer on any of 121 requests; 24% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,121,0.0,0.24,discover,1.0,False
+203.0.113.8,118,4,likely bot,118 absurdly long requests (up to 76 parameters); no referrer on any of 118 requests; 36% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,118,0.0,0.356,discover,1.0,False
+203.0.113.12,114,4,likely bot,114 absurdly long requests (up to 76 parameters); no referrer on any of 114 requests; 20% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,114,0.0,0.202,discover,1.0,False
+203.0.113.7,112,4,likely bot,112 absurdly long requests (up to 76 parameters); no referrer on any of 112 requests; 27% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,112,0.0,0.268,discover,1.0,False
+203.0.113.15,111,4,likely bot,111 absurdly long requests (up to 76 parameters); no referrer on any of 111 requests; 22% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,111,0.0,0.216,discover,1.0,False
+203.0.113.3,105,4,likely bot,105 absurdly long requests (up to 76 parameters); no referrer on any of 105 requests; 28% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,105,0.0,0.276,discover,1.0,False
+203.0.113.2,105,4,likely bot,105 absurdly long requests (up to 76 parameters); no referrer on any of 105 requests; 24% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,105,0.0,0.238,discover,1.0,False
+203.0.113.10,105,4,likely bot,105 absurdly long requests (up to 76 parameters); no referrer on any of 105 requests; 20% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,105,0.0,0.2,discover,1.0,False
+203.0.113.9,105,4,likely bot,105 absurdly long requests (up to 76 parameters); no referrer on any of 105 requests; 33% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,105,0.0,0.333,discover,1.0,False
+203.0.113.6,103,4,likely bot,103 absurdly long requests (up to 76 parameters); no referrer on any of 103 requests; 30% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,103,0.0,0.301,discover,1.0,False
+203.0.113.14,103,4,likely bot,103 absurdly long requests (up to 76 parameters); no referrer on any of 103 requests; 24% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,103,0.0,0.243,discover,1.0,False
+203.0.113.5,99,4,likely bot,99 absurdly long requests (up to 76 parameters); no referrer on any of 99 requests; 22% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,99,0.0,0.222,discover,1.0,False
+203.0.113.4,97,4,likely bot,97 absurdly long requests (up to 76 parameters); no referrer on any of 97 requests; 23% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,97,0.0,0.227,discover,1.0,False
+203.0.113.13,95,4,likely bot,95 absurdly long requests (up to 76 parameters); no referrer on any of 95 requests; 25% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,95,0.0,0.253,discover,1.0,False
+203.0.113.60,81,4,likely bot,81 absurdly long requests (up to 76 parameters); no referrer on any of 81 requests; 43% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,81,0.0,0.432,discover,1.0,False
+203.0.113.33,77,4,likely bot,77 absurdly long requests (up to 76 parameters); no referrer on any of 77 requests; 39% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,77,0.0,0.39,discover,1.0,False
+203.0.113.21,76,4,likely bot,76 absurdly long requests (up to 76 parameters); no referrer on any of 76 requests; 36% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,76,0.0,0.355,discover,1.0,False
+203.0.113.56,75,4,likely bot,75 absurdly long requests (up to 76 parameters); no referrer on any of 75 requests; 44% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,75,0.0,0.44,discover,1.0,False
+203.0.113.73,75,4,likely bot,75 absurdly long requests (up to 76 parameters); no referrer on any of 75 requests; 33% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,75,0.0,0.333,discover,1.0,False
+203.0.113.67,75,4,likely bot,75 absurdly long requests (up to 76 parameters); no referrer on any of 75 requests; 43% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,75,0.0,0.427,discover,1.0,False
+203.0.113.65,74,4,likely bot,74 absurdly long requests (up to 76 parameters); no referrer on any of 74 requests; 46% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,74,0.0,0.459,discover,1.0,False
+203.0.113.40,74,4,likely bot,74 absurdly long requests (up to 76 parameters); no referrer on any of 74 requests; 39% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,74,0.0,0.392,discover,1.0,False
+203.0.113.39,73,4,likely bot,73 absurdly long requests (up to 76 parameters); no referrer on any of 73 requests; 45% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,73,0.0,0.452,discover,1.0,False
+203.0.113.23,72,4,likely bot,72 absurdly long requests (up to 76 parameters); no referrer on any of 72 requests; 39% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,72,0.0,0.389,discover,1.0,False
+203.0.113.26,72,4,likely bot,72 absurdly long requests (up to 76 parameters); no referrer on any of 72 requests; 35% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,72,0.0,0.347,discover,1.0,False
+203.0.113.50,72,4,likely bot,72 absurdly long requests (up to 76 parameters); no referrer on any of 72 requests; 36% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,72,0.0,0.361,discover,1.0,False
+203.0.113.29,72,4,likely bot,72 absurdly long requests (up to 76 parameters); no referrer on any of 72 requests; 39% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,72,0.0,0.389,discover,1.0,False
+203.0.113.48,71,4,likely bot,71 absurdly long requests (up to 76 parameters); no referrer on any of 71 requests; 34% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,71,0.0,0.338,discover,1.0,False
+203.0.113.32,71,4,likely bot,71 absurdly long requests (up to 76 parameters); no referrer on any of 71 requests; 46% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,71,0.0,0.465,discover,1.0,False
+203.0.113.37,70,4,likely bot,70 absurdly long requests (up to 76 parameters); no referrer on any of 70 requests; 46% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,70,0.0,0.457,discover,1.0,False
+203.0.113.20,70,4,likely bot,70 absurdly long requests (up to 76 parameters); no referrer on any of 70 requests; 50% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,70,0.0,0.5,discover,1.0,False
+203.0.113.41,70,4,likely bot,70 absurdly long requests (up to 76 parameters); no referrer on any of 70 requests; 51% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,70,0.0,0.514,discover,1.0,False
+203.0.113.61,70,4,likely bot,70 absurdly long requests (up to 76 parameters); no referrer on any of 70 requests; 41% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,70,0.0,0.414,discover,1.0,False
+203.0.113.71,70,4,likely bot,70 absurdly long requests (up to 76 parameters); no referrer on any of 70 requests; 39% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,70,0.0,0.386,discover,1.0,False
+203.0.113.75,69,4,likely bot,69 absurdly long requests (up to 76 parameters); no referrer on any of 69 requests; 43% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,69,0.0,0.435,discover,1.0,False
+203.0.113.35,68,4,likely bot,68 absurdly long requests (up to 76 parameters); no referrer on any of 68 requests; 43% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,68,0.0,0.426,discover,1.0,False
+203.0.113.66,68,4,likely bot,68 absurdly long requests (up to 76 parameters); no referrer on any of 68 requests; 35% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,68,0.0,0.353,discover,1.0,False
+203.0.113.70,67,4,likely bot,67 absurdly long requests (up to 76 parameters); no referrer on any of 67 requests; 40% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,67,0.0,0.403,discover,1.0,False
+203.0.113.52,67,4,likely bot,67 absurdly long requests (up to 76 parameters); no referrer on any of 67 requests; 39% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,67,0.0,0.388,discover,1.0,False
+203.0.113.51,66,4,likely bot,66 absurdly long requests (up to 76 parameters); no referrer on any of 66 requests; 42% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,66,0.0,0.424,discover,1.0,False
+203.0.113.58,66,4,likely bot,66 absurdly long requests (up to 76 parameters); no referrer on any of 66 requests; 30% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,66,0.0,0.303,discover,1.0,False
+203.0.113.59,66,4,likely bot,66 absurdly long requests (up to 76 parameters); no referrer on any of 66 requests; 53% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,66,0.0,0.53,discover,1.0,False
+203.0.113.38,66,4,likely bot,66 absurdly long requests (up to 76 parameters); no referrer on any of 66 requests; 39% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,66,0.0,0.394,discover,1.0,False
+203.0.113.78,66,4,likely bot,66 absurdly long requests (up to 76 parameters); no referrer on any of 66 requests; 30% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,66,0.0,0.303,discover,1.0,False
+203.0.113.18,65,4,likely bot,65 absurdly long requests (up to 76 parameters); no referrer on any of 65 requests; 34% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,65,0.0,0.338,discover,1.0,False
+203.0.113.77,65,4,likely bot,65 absurdly long requests (up to 76 parameters); no referrer on any of 65 requests; 37% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,65,0.0,0.369,discover,1.0,False
+203.0.113.47,65,4,likely bot,65 absurdly long requests (up to 76 parameters); no referrer on any of 65 requests; 34% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,65,0.0,0.338,discover,1.0,False
+203.0.113.24,65,4,likely bot,65 absurdly long requests (up to 76 parameters); no referrer on any of 65 requests; 26% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,65,0.0,0.262,discover,1.0,False
+203.0.113.64,65,4,likely bot,65 absurdly long requests (up to 76 parameters); no referrer on any of 65 requests; 43% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,65,0.0,0.431,discover,1.0,False
+203.0.113.63,65,4,likely bot,65 absurdly long requests (up to 76 parameters); no referrer on any of 65 requests; 48% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,65,0.0,0.477,discover,1.0,False
+203.0.113.34,64,4,likely bot,64 absurdly long requests (up to 76 parameters); no referrer on any of 64 requests; 36% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,64,0.0,0.359,discover,1.0,False
+203.0.113.44,64,4,likely bot,64 absurdly long requests (up to 76 parameters); no referrer on any of 64 requests; 38% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,64,0.0,0.375,discover,1.0,False
+203.0.113.17,64,4,likely bot,64 absurdly long requests (up to 76 parameters); no referrer on any of 64 requests; 38% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,64,0.0,0.375,discover,1.0,False
+203.0.113.16,64,4,likely bot,64 absurdly long requests (up to 76 parameters); no referrer on any of 64 requests; 36% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,64,0.0,0.359,discover,1.0,False
+203.0.113.30,63,4,likely bot,63 absurdly long requests (up to 76 parameters); no referrer on any of 63 requests; 35% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,63,0.0,0.349,discover,1.0,False
+203.0.113.22,62,4,likely bot,62 absurdly long requests (up to 76 parameters); no referrer on any of 62 requests; 39% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,62,0.0,0.387,discover,1.0,False
+203.0.113.76,61,4,likely bot,61 absurdly long requests (up to 76 parameters); no referrer on any of 61 requests; 52% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,61,0.0,0.525,discover,1.0,False
+203.0.113.62,61,4,likely bot,61 absurdly long requests (up to 76 parameters); no referrer on any of 61 requests; 36% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,61,0.0,0.361,discover,1.0,False
+203.0.113.55,60,4,likely bot,60 absurdly long requests (up to 76 parameters); no referrer on any of 60 requests; 38% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,60,0.0,0.383,discover,1.0,False
+203.0.113.28,60,4,likely bot,60 absurdly long requests (up to 76 parameters); no referrer on any of 60 requests; 53% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,60,0.0,0.533,discover,1.0,False
+203.0.113.45,60,4,likely bot,60 absurdly long requests (up to 76 parameters); no referrer on any of 60 requests; 40% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,60,0.0,0.4,discover,1.0,False
+203.0.113.19,60,4,likely bot,60 absurdly long requests (up to 76 parameters); no referrer on any of 60 requests; 53% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,60,0.0,0.533,discover,1.0,False
+203.0.113.53,60,4,likely bot,60 absurdly long requests (up to 76 parameters); no referrer on any of 60 requests; 45% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,60,0.0,0.45,discover,1.0,False
+203.0.113.31,59,4,likely bot,59 absurdly long requests (up to 76 parameters); no referrer on any of 59 requests; 46% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,59,0.0,0.458,discover,1.0,False
+203.0.113.46,59,4,likely bot,59 absurdly long requests (up to 76 parameters); no referrer on any of 59 requests; 41% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,59,0.0,0.407,discover,1.0,False
+203.0.113.36,59,4,likely bot,59 absurdly long requests (up to 76 parameters); no referrer on any of 59 requests; 39% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,59,0.0,0.39,discover,1.0,False
+203.0.113.69,59,4,likely bot,59 absurdly long requests (up to 76 parameters); no referrer on any of 59 requests; 42% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,59,0.0,0.424,discover,1.0,False
+203.0.113.42,59,4,likely bot,59 absurdly long requests (up to 76 parameters); no referrer on any of 59 requests; 39% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,59,0.0,0.39,discover,1.0,False
+203.0.113.74,58,4,likely bot,58 absurdly long requests (up to 76 parameters); no referrer on any of 58 requests; 43% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,58,0.0,0.431,discover,1.0,False
+203.0.113.79,58,4,likely bot,58 absurdly long requests (up to 76 parameters); no referrer on any of 58 requests; 38% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,58,0.0,0.379,discover,1.0,False
+203.0.113.72,57,4,likely bot,57 absurdly long requests (up to 76 parameters); no referrer on any of 57 requests; 46% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,57,0.0,0.456,discover,1.0,False
+203.0.113.25,57,4,likely bot,57 absurdly long requests (up to 76 parameters); no referrer on any of 57 requests; 39% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,57,0.0,0.386,discover,1.0,False
+203.0.113.43,56,4,likely bot,56 absurdly long requests (up to 76 parameters); no referrer on any of 56 requests; 45% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,56,0.0,0.446,discover,1.0,False
+203.0.113.68,55,4,likely bot,55 absurdly long requests (up to 76 parameters); no referrer on any of 55 requests; 49% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,55,0.0,0.491,discover,1.0,False
+203.0.113.27,54,4,likely bot,54 absurdly long requests (up to 76 parameters); no referrer on any of 54 requests; 26% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,54,0.0,0.259,discover,1.0,False
+203.0.113.57,54,4,likely bot,54 absurdly long requests (up to 76 parameters); no referrer on any of 54 requests; 35% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,54,0.0,0.352,discover,1.0,False
+203.0.113.49,53,4,likely bot,53 absurdly long requests (up to 76 parameters); no referrer on any of 53 requests; 42% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,53,0.0,0.415,discover,1.0,False
+203.0.113.54,52,4,likely bot,52 absurdly long requests (up to 76 parameters); no referrer on any of 52 requests; 38% 'slow down' replies; 100% of requests are 'discover',0,1,1,1,1,,76,52,0.0,0.385,discover,1.0,False
+198.51.100.35,202,3,likely bot,crawler that never read robots.txt; no referrer on any of 202 requests; 100% of requests are 'bitstream',1,0,1,0,1,ccbot,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.36,192,3,likely bot,crawler that never read robots.txt; no referrer on any of 192 requests; 100% of requests are 'bitstream',1,0,1,0,1,ccbot,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.51,189,3,likely bot,crawler that never read robots.txt; no referrer on any of 189 requests; 100% of requests are 'bitstream',1,0,1,0,1,perplexitybot,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.37,186,3,likely bot,crawler that never read robots.txt; no referrer on any of 186 requests; 100% of requests are 'bitstream',1,0,1,0,1,ccbot,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.33,185,3,likely bot,crawler that never read robots.txt; no referrer on any of 185 requests; 100% of requests are 'bitstream',1,0,1,0,1,ccbot,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.54,181,3,likely bot,crawler that never read robots.txt; no referrer on any of 181 requests; 100% of requests are 'bitstream',1,0,1,0,1,perplexitybot,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.38,175,3,likely bot,crawler that never read robots.txt; no referrer on any of 175 requests; 100% of requests are 'bitstream',1,0,1,0,1,ccbot,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.34,173,3,likely bot,crawler that never read robots.txt; no referrer on any of 173 requests; 100% of requests are 'bitstream',1,0,1,0,1,ccbot,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.23,171,3,likely bot,crawler that never read robots.txt; no referrer on any of 171 requests; 100% of requests are 'bitstream',1,0,1,0,1,gptbot,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.53,168,3,likely bot,crawler that never read robots.txt; no referrer on any of 168 requests; 100% of requests are 'bitstream',1,0,1,0,1,perplexitybot,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.55,166,3,likely bot,crawler that never read robots.txt; no referrer on any of 166 requests; 100% of requests are 'bitstream',1,0,1,0,1,perplexitybot,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.47,165,3,likely bot,crawler that never read robots.txt; no referrer on any of 165 requests; 100% of requests are 'bitstream',1,0,1,0,1,amazonbot,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.24,162,3,likely bot,crawler that never read robots.txt; no referrer on any of 162 requests; 100% of requests are 'bitstream',1,0,1,0,1,gptbot,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.56,160,3,likely bot,crawler that never read robots.txt; no referrer on any of 160 requests; 100% of requests are 'bitstream',1,0,1,0,1,perplexitybot,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.26,160,3,likely bot,crawler that never read robots.txt; no referrer on any of 160 requests; 100% of requests are 'bitstream',1,0,1,0,1,gptbot,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.25,157,3,likely bot,crawler that never read robots.txt; no referrer on any of 157 requests; 100% of requests are 'bitstream',1,0,1,0,1,gptbot,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.21,155,3,likely bot,crawler that never read robots.txt; no referrer on any of 155 requests; 100% of requests are 'bitstream',1,0,1,0,1,gptbot,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.48,153,3,likely bot,crawler that never read robots.txt; no referrer on any of 153 requests; 100% of requests are 'bitstream',1,0,1,0,1,amazonbot,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.45,152,3,likely bot,crawler that never read robots.txt; no referrer on any of 152 requests; 100% of requests are 'bitstream',1,0,1,0,1,amazonbot,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.52,152,3,likely bot,crawler that never read robots.txt; no referrer on any of 152 requests; 100% of requests are 'bitstream',1,0,1,0,1,perplexitybot,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.50,149,3,likely bot,crawler that never read robots.txt; no referrer on any of 149 requests; 100% of requests are 'bitstream',1,0,1,0,1,amazonbot,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.32,146,3,likely bot,crawler that never read robots.txt; no referrer on any of 146 requests; 100% of requests are 'bitstream',1,0,1,0,1,claudebot,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.31,140,3,likely bot,crawler that never read robots.txt; no referrer on any of 140 requests; 100% of requests are 'bitstream',1,0,1,0,1,claudebot,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.46,140,3,likely bot,crawler that never read robots.txt; no referrer on any of 140 requests; 100% of requests are 'bitstream',1,0,1,0,1,amazonbot,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.49,140,3,likely bot,crawler that never read robots.txt; no referrer on any of 140 requests; 100% of requests are 'bitstream',1,0,1,0,1,amazonbot,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.27,139,3,likely bot,crawler that never read robots.txt; no referrer on any of 139 requests; 100% of requests are 'bitstream',1,0,1,0,1,claudebot,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.22,133,3,likely bot,crawler that never read robots.txt; no referrer on any of 133 requests; 100% of requests are 'bitstream',1,0,1,0,1,gptbot,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.28,130,3,likely bot,crawler that never read robots.txt; no referrer on any of 130 requests; 100% of requests are 'bitstream',1,0,1,0,1,claudebot,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.29,119,3,likely bot,crawler that never read robots.txt; no referrer on any of 119 requests; 100% of requests are 'bitstream',1,0,1,0,1,claudebot,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.30,118,3,likely bot,crawler that never read robots.txt; no referrer on any of 118 requests; 100% of requests are 'bitstream',1,0,1,0,1,claudebot,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.39,113,3,likely bot,crawler that never read robots.txt; no referrer on any of 113 requests; 100% of requests are 'bitstream',1,0,1,0,1,bytespider,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.40,111,3,likely bot,crawler that never read robots.txt; no referrer on any of 111 requests; 100% of requests are 'bitstream',1,0,1,0,1,bytespider,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.44,102,3,likely bot,crawler that never read robots.txt; no referrer on any of 102 requests; 100% of requests are 'bitstream',1,0,1,0,1,bytespider,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.43,99,3,likely bot,crawler that never read robots.txt; no referrer on any of 99 requests; 100% of requests are 'bitstream',1,0,1,0,1,bytespider,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.41,98,3,likely bot,crawler that never read robots.txt; no referrer on any of 98 requests; 100% of requests are 'bitstream',1,0,1,0,1,bytespider,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.42,90,3,likely bot,crawler that never read robots.txt; no referrer on any of 90 requests; 100% of requests are 'bitstream',1,0,1,0,1,bytespider,0,0,0.0,0.0,bitstream,1.0,False
+198.51.100.10,414,1,likely human / well-behaved bot,no referrer on any of 414 requests,0,0,1,0,0,googlebot,2,0,0.0,0.0,bitstream,0.278,True
+198.51.100.11,414,1,likely human / well-behaved bot,no referrer on any of 414 requests,0,0,1,0,0,bingbot,2,0,0.0,0.0,handle,0.261,True
+192.0.2.36,84,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.369,0.0,search,0.31,False
+192.0.2.6,77,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.429,0.0,browse,0.312,False
+192.0.2.23,76,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.474,0.0,handle,0.276,False
+192.0.2.38,74,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.351,0.0,search,0.311,False
+192.0.2.20,73,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.438,0.0,handle,0.274,False
+192.0.2.35,73,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.397,0.0,bitstream,0.288,False
+192.0.2.32,73,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.466,0.0,bitstream,0.356,False
+192.0.2.9,72,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.458,0.0,browse,0.306,False
+192.0.2.24,72,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.431,0.0,search,0.292,False
+192.0.2.29,72,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.333,0.0,handle,0.292,False
+192.0.2.14,71,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.451,0.0,handle,0.366,False
+192.0.2.12,71,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.324,0.0,handle,0.324,False
+192.0.2.15,69,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.507,0.0,search,0.333,False
+192.0.2.19,69,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.362,0.0,bitstream,0.29,False
+192.0.2.40,69,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.246,0.0,bitstream,0.29,False
+192.0.2.22,68,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.368,0.0,browse,0.309,False
+192.0.2.13,67,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.373,0.0,bitstream,0.299,False
+192.0.2.17,67,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.433,0.0,bitstream,0.284,False
+192.0.2.33,67,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.343,0.0,handle,0.284,False
+192.0.2.21,66,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.424,0.0,bitstream,0.303,False
+192.0.2.28,65,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.431,0.0,handle,0.369,False
+192.0.2.5,65,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.4,0.0,bitstream,0.354,False
+192.0.2.10,65,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.585,0.0,handle,0.308,False
+192.0.2.27,64,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.422,0.0,handle,0.266,False
+192.0.2.16,62,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.371,0.0,handle,0.274,False
+192.0.2.7,62,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.387,0.0,search,0.387,False
+192.0.2.37,61,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.475,0.0,bitstream,0.344,False
+192.0.2.2,61,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.525,0.0,bitstream,0.344,False
+192.0.2.1,61,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.311,0.0,handle,0.344,False
+192.0.2.11,61,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.426,0.0,search,0.328,False
+192.0.2.8,61,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.443,0.0,bitstream,0.361,False
+192.0.2.30,60,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.467,0.0,handle,0.367,False
+192.0.2.18,59,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.407,0.0,search,0.322,False
+192.0.2.26,59,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.39,0.0,bitstream,0.339,False
+192.0.2.25,57,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.333,0.0,search,0.316,False
+192.0.2.39,56,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.304,0.0,browse,0.339,False
+192.0.2.34,54,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.426,0.0,browse,0.315,False
+192.0.2.3,48,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.479,0.0,bitstream,0.271,False
+192.0.2.31,47,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.404,0.0,search,0.298,False
+192.0.2.4,42,0,likely human / well-behaved bot,,0,0,0,0,0,,2,0,0.429,0.0,handle,0.333,False
