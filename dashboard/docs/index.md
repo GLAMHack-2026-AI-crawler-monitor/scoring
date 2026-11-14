@@ -17,16 +17,25 @@ const datasetId = view(Inputs.select(DATASETS.map((d) => d.id), {
 ```
 
 ```js
-const scores = loaded.get(datasetId);
+// The CSV still carries the scorer's original label text; map it to the
+// dashboard's own label names here so every chart/table below just uses
+// d.label without needing to know about the raw values.
+const RAW_TO_LABEL = {
+  "likely bot": "regular bots",
+  "suspicious": "suspicious",
+  "likely human / well-behaved bot": "well meaning bots & humans",
+  "too few requests": "bots scanning for vulnerabilities"
+};
+const scores = loaded.get(datasetId).map((d) => ({...d, label: RAW_TO_LABEL[d.label] ?? d.label}));
 ```
 
 ```js
 // Fixed domain/palette so a label keeps the same colour across every chart
 // and every dataset switch (datasets don't all contain the same labels —
-// e.g. "too few requests" is absent from the small sample dataset — so
-// leaving this to each Plot call's automatic inference would reassign
-// colours depending on which labels happen to be present).
-const LABEL_DOMAIN = ["likely bot", "suspicious", "likely human / well-behaved bot", "too few requests"];
+// e.g. "bots scanning for vulnerabilities" is absent from the small sample
+// dataset — so leaving this to each Plot call's automatic inference would
+// reassign colours depending on which labels happen to be present).
+const LABEL_DOMAIN = ["regular bots", "suspicious", "well meaning bots & humans", "bots scanning for vulnerabilities"];
 const LABEL_COLORS = ["#e15759", "#f28e2b", "#59a14f", "#bab0ac"];
 const labelColor = d3.scaleOrdinal(LABEL_DOMAIN, LABEL_COLORS);
 ```
@@ -40,9 +49,9 @@ const byLabel = d3.rollup(scores, (v) => v.length, (d) => d.label);
 
 <div class="grid grid-cols-4">
   <div class="card"><h2>IPs scored</h2><span class="big">${total}</span></div>
-  <div class="card"><h2>Likely bot</h2><span class="big">${byLabel.get("likely bot") ?? 0}</span></div>
+  <div class="card"><h2>Regular bots</h2><span class="big">${byLabel.get("regular bots") ?? 0}</span></div>
   <div class="card"><h2>Suspicious</h2><span class="big">${byLabel.get("suspicious") ?? 0}</span></div>
-  <div class="card"><h2>Likely human</h2><span class="big">${byLabel.get("likely human / well-behaved bot") ?? 0}</span></div>
+  <div class="card"><h2>Well meaning bots & humans</h2><span class="big">${byLabel.get("well meaning bots & humans") ?? 0}</span></div>
 </div>
 
 ## Score distribution
@@ -84,21 +93,22 @@ Plot.plot({
 })
 ```
 
-## Request mosaic
+## Request mosaic, grouped by label
 
 ```js
 // ip_scores.csv has one row per IP, not one per request, so there's no raw
 // per-request table to draw from. This rebuilds a stand-in: it allocates the
 // grid's 800 cells across the (up to 4) *labels* in proportion to that
 // label's share of the dataset's total requests (largest-remainder rounding
-// so the allocation sums to exactly 800), then shuffles the cells so same
-// colour squares don't clump into a solid block.
+// so the allocation sums to exactly 800), then shuffles the cells (the
+// grouping into solid blocks below re-sorts them anyway, but this keeps
+// which IP each cell's tooltip names unpredictable).
 //
 // Allocation happens per label, not per individual IP: with far more IPs
 // (tens of thousands here) than grid cells, allocating per-IP breaks the
 // largest-remainder method — almost every IP's exact share rounds to 0 on
 // its own, so the few largest IPs win nearly all of the 800 cells and whole
-// labels (e.g. "too few requests", made of thousands of 1-2-request IPs)
+// labels (e.g. "bots scanning for vulnerabilities", made of thousands of 1-2-request IPs)
 // can vanish from the grid even though their requests add up to a sizeable
 // share of total traffic. Each cell's tooltip still names one real IP from
 // its label, chosen by a request-weighted random draw (cosmetic only —
@@ -134,21 +144,11 @@ function buildRequestGrid(rows, n) {
 const requestCells = buildRequestGrid(scores, GRID_CELLS);
 ```
 
-Each of the ${GRID_CELLS} squares below stands for roughly 1/${GRID_CELLS} of this dataset's requests, coloured by the rating of the IP that sent it — so a mostly-red mosaic means most *traffic* (not just most IPs) looks like a bot, even if bot IPs are a minority of the IP count above.
+Each of the ${GRID_CELLS} squares below stands for roughly 1/${GRID_CELLS} of this dataset's requests, coloured by the rating of the IP that sent it — so a mostly-red mosaic means most *traffic* (not just most IPs) looks like a bot, even if bot IPs are a minority of the IP count above. Cells are grouped into one solid block per label, from the most-populous label to the least, filling column by column (top-to-bottom, then the next column to the right).
 
 <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
   ${LABEL_DOMAIN.map((label) => html`<span style="display:inline-flex; align-items:center; gap:0.35rem; font-size:0.85em;"><span style="width:0.9em; height:0.9em; background:${labelColor(label)}; display:inline-block; border-radius:2px;"></span>${label}</span>`)}
 </div>
-
-```js
-html`<div style="display:grid; grid-template-columns:repeat(${GRID_COLS}, 1fr); grid-template-rows:repeat(${GRID_ROWS}, 1fr); grid-auto-flow:column; aspect-ratio:${GRID_COLS} / ${GRID_ROWS}; gap:2px; max-width:720px;">
-  ${requestCells.map((d) => html`<div style="background:${labelColor(d.label)};" title="${d.ip} — ${d.requests} requests, score ${d.score} (${d.label})"></div>`)}
-</div>`
-```
-
-## Request mosaic, grouped by label
-
-The exact same 800 sampled cells as above, just reordered — grouped into one solid block per label, from the most-populous label to the least, filling column by column (top-to-bottom, then the next column to the right) instead of shuffled.
 
 ```js
 const labelCounts = d3.rollup(requestCells, (v) => v.length, (d) => d.label);
