@@ -58,6 +58,8 @@ const byLabel = d3.rollup(scores, (v) => v.length, (d) => d.label);
 
 ## Score distribution
 
+The bar chart shows the distribution of the score across the analysed IP addresses. Bots which are only scanning for vulnarabilities share the same behaviour as humans and well meaing bots, by only requesting the website once.
+
 ```js
 Plot.plot({
   marginLeft: 50,
@@ -71,7 +73,9 @@ Plot.plot({
 })
 ```
 
-## Requests vs. score
+## Requests vs. score correlation
+
+The scatter plot shows the correlation between the amount of requests from one IP address and the score within the scoring system. It becomes evident again, that singular traits of human-like-behaviour can assign bots, which are only scanning for vulnarabilities, a good score of 1. To further distinguish those bots from humans the other four behavioural elements from the scoring system become relevant. For details see documentation of the scoring system on GitHub (https://github.com/bot-detection/scoring).
 
 ```js
 // Large datasets (hundreds of thousands of IPs) render as a random sample
@@ -95,7 +99,9 @@ Plot.plot({
 })
 ```
 
-## Request mosaic, grouped by label
+## Who wants to know? Human and bot requests on institutional repositories.
+
+AI crawlers are scraping institutional repositories on an unprecedented scale to train models, without asking permission. Over 90% of research institutions face aggressive bot traffic at least weekly, which disrupts services and drains resources. In May 2026, the University of Zurich's repository ZORA had to block outside access just to stay online.
 
 ```js
 // ip_scores.csv has one row per IP, not one per request, so there's no raw
@@ -145,8 +151,6 @@ function buildRequestGrid(rows, n) {
 
 const requestCells = buildRequestGrid(scores, GRID_CELLS);
 ```
-
-Each of the ${GRID_CELLS} squares below stands for roughly 1/${GRID_CELLS} of this dataset's requests, coloured by the rating of the IP that sent it — so a mostly-red mosaic means most *traffic* (not just most IPs) looks like a bot, even if bot IPs are a minority of the IP count above. Cells are grouped into one solid block per label, from the most-populous label to the least, filling column by column (top-to-bottom, then the next column to the right).
 
 <div style="display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; margin-bottom: 0.5rem;">
   ${LABEL_DOMAIN.map((label) => html`<span style="display:inline-flex; align-items:center; gap:0.35rem; font-size:0.85em;"><span style="width:0.9em; height:0.9em; background:${labelColor(label)}; display:inline-block; border-radius:2px;"></span>${label}</span>`)}
