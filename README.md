@@ -86,6 +86,11 @@ Build the static site into `dashboard/dist/`:
 npm run build
 ```
 
+Pushes to `main` automatically build and publish the dashboard to GitHub
+Pages via [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml), at
+`https://bot-detection.github.io/scoring/` (once Pages is enabled with
+"GitHub Actions" as the source under the repo's Settings → Pages).
+
 ## Developer tools
 
 `generate_synthetic_log.py` blows up a small base access-log CSV into a much
