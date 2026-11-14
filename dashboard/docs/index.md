@@ -58,6 +58,8 @@ const byLabel = d3.rollup(scores, (v) => v.length, (d) => d.label);
 
 ## Score distribution
 
+The bar chart shows the distribution of the score across the analysed IP addresses. Bots which are only scanning for vulnarabilities share the same behaviour as humans and well meaing bots, by only requesting the website once.
+
 ```js
 Plot.plot({
   marginLeft: 50,
