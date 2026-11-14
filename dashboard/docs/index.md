@@ -42,6 +42,8 @@ const labelColor = d3.scaleOrdinal(LABEL_DOMAIN, LABEL_COLORS);
 
 # Request scoring system
 
+In order to know if an institutional website was requested by a human, a well meaning bot, a regular bot, or a bad bot just looking for vulnerabilities, every IP address in a web access log was scored for those four behaviour types.
+
 ```js
 const total = scores.length;
 const byLabel = d3.rollup(scores, (v) => v.length, (d) => d.label);
