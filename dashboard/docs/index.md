@@ -141,22 +141,24 @@ Each of the ${GRID_CELLS} squares below stands for roughly 1/${GRID_CELLS} of th
 </div>
 
 ```js
-html`<div style="display:grid; grid-template-columns:repeat(${GRID_COLS}, 1fr); gap:2px; max-width:720px;">
-  ${requestCells.map((d) => html`<div style="aspect-ratio:1; background:${labelColor(d.label)};" title="${d.ip} — ${d.requests} requests, score ${d.score} (${d.label})"></div>`)}
+html`<div style="display:grid; grid-template-columns:repeat(${GRID_COLS}, 1fr); grid-template-rows:repeat(${GRID_ROWS}, 1fr); grid-auto-flow:column; aspect-ratio:${GRID_COLS} / ${GRID_ROWS}; gap:2px; max-width:720px;">
+  ${requestCells.map((d) => html`<div style="background:${labelColor(d.label)};" title="${d.ip} — ${d.requests} requests, score ${d.score} (${d.label})"></div>`)}
 </div>`
 ```
 
-## Request mosaic, sorted by score
+## Request mosaic, grouped by label
 
-The exact same 800 sampled cells as above, just reordered — score 0 cells first, then 1, then 2, and so on up to 5 — instead of shuffled. Same-score cells can still differ in colour (e.g. score 0–1 covers both "too few requests" and "likely human / well-behaved bot"; see `score_bot_ips.py`'s label thresholds in section 6), so this view doubles as a check on how cleanly score buckets separate the four labels.
+The exact same 800 sampled cells as above, just reordered — grouped into one solid block per label, from the most-populous label to the least, filling column by column (top-to-bottom, then the next column to the right) instead of shuffled.
 
 ```js
-const requestCellsByScore = [...requestCells].sort((a, b) => a.score - b.score);
+const labelCounts = d3.rollup(requestCells, (v) => v.length, (d) => d.label);
+const labelOrder = [...labelCounts].sort((a, b) => d3.descending(a[1], b[1])).map(([label]) => label);
+const requestCellsByLabel = [...requestCells].sort((a, b) => labelOrder.indexOf(a.label) - labelOrder.indexOf(b.label));
 ```
 
 ```js
-html`<div style="display:grid; grid-template-columns:repeat(${GRID_COLS}, 1fr); gap:2px; max-width:720px;">
-  ${requestCellsByScore.map((d) => html`<div style="aspect-ratio:1; background:${labelColor(d.label)};" title="${d.ip} — ${d.requests} requests, score ${d.score} (${d.label})"></div>`)}
+html`<div style="display:grid; grid-template-columns:repeat(${GRID_COLS}, 1fr); grid-template-rows:repeat(${GRID_ROWS}, 1fr); grid-auto-flow:column; aspect-ratio:${GRID_COLS} / ${GRID_ROWS}; gap:2px; max-width:720px;">
+  ${requestCellsByLabel.map((d) => html`<div style="background:${labelColor(d.label)};" title="${d.ip} — ${d.requests} requests, score ${d.score} (${d.label})"></div>`)}
 </div>`
 ```
 

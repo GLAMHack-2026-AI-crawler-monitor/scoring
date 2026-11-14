@@ -38,7 +38,7 @@ Then run `score_bot_ips.py` on the resulting CSV as in Quick start above.
 * summary cards
 * score distribution
 * requests vs. score
-* request mosaic
+* request mosaic (shuffled, and sorted by score)
 
 either one at a time (close the graph window to see the next one):
 

@@ -11,6 +11,7 @@ Usage:
 Requires: matplotlib, pandas, numpy
 """
 import argparse
+from collections import Counter
 from pathlib import Path
 
 import matplotlib.pyplot as plt
@@ -98,7 +99,9 @@ def build_request_grid(df, n, rng):
     """Allocate n grid cells across labels, proportional to each label's share
     of total requests (largest-remainder rounding), mirroring
     dashboard/docs/index.md's buildRequestGrid() - see that file's comment for
-    why allocation must happen per label, not per individual IP."""
+    why allocation must happen per label, not per individual IP. Returns
+    (label, score) pairs, shuffled, so the same draw can be rendered as-is
+    (unsorted) or re-sorted by score without redrawing."""
     totals = df.groupby("label")["requests"].sum()
     total = totals.sum()
     exact = totals / total * n if total else totals * 0.0
@@ -116,14 +119,27 @@ def build_request_grid(df, n, rng):
         weights = sub["requests"].to_numpy(dtype=float)
         probs = weights / weights.sum()
         chosen = rng.choice(len(sub), size=count, p=probs)
-        cells.extend([label] * len(chosen))
+        scores = sub["score"].to_numpy()[chosen]
+        cells.extend(zip([label] * len(chosen), scores))
     rng.shuffle(cells)
     return cells[:n]
 
 
-def plot_request_mosaic(df, save_dir, rng):
-    cells = build_request_grid(df, GRID_CELLS, rng)
-    grid = np.array(cells).reshape(GRID_ROWS, GRID_COLS)
+def sort_cells_by_label_count(cells):
+    """Group cells by label into solid blocks, ordered from the most-populous
+    label to the least, so the mosaic fills top-left to bottom-right one
+    color at a time instead of shuffled or scattered by score."""
+    counts = Counter(label for label, _ in cells)
+    rank = {label: i for i, label in enumerate(sorted(counts, key=counts.get, reverse=True))}
+    return sorted(cells, key=lambda cell: rank[cell[0]])
+
+
+def render_request_mosaic(cells, title, name, save_dir):
+    """Render (label, score) cells into the grid, filled column-major
+    (top-to-bottom within a column, then the next column to the right) in
+    the order given - callers sort/shuffle beforehand."""
+    labels = np.array([label for label, _ in cells])
+    grid = labels.reshape(GRID_ROWS, GRID_COLS, order="F")
     color_grid = np.ones((GRID_ROWS, GRID_COLS, 3))
     for label in LABEL_DOMAIN:
         hexcode = LABEL_COLORS[label].lstrip("#")
@@ -134,10 +150,26 @@ def plot_request_mosaic(df, save_dir, rng):
     ax.imshow(color_grid, aspect="equal")
     ax.set_xticks([])
     ax.set_yticks([])
-    ax.set_title(f"Request mosaic (each of {GRID_CELLS} squares ≈ 1/{GRID_CELLS} of requests)")
+    ax.set_title(title)
     handles = [plt.Rectangle((0, 0), 1, 1, color=LABEL_COLORS[l]) for l in LABEL_DOMAIN]
     ax.legend(handles, LABEL_DOMAIN, loc="upper center", bbox_to_anchor=(0.5, -0.03), ncol=2, fontsize=8, frameon=False)
-    show_or_save(fig, "request_mosaic", save_dir)
+    show_or_save(fig, name, save_dir)
+
+
+def plot_request_mosaic(df, save_dir, rng):
+    cells = build_request_grid(df, GRID_CELLS, rng)
+    render_request_mosaic(
+        cells,
+        f"Request mosaic (each of {GRID_CELLS} squares ≈ 1/{GRID_CELLS} of requests)",
+        "request_mosaic", save_dir,
+    )
+
+    cells_by_label = sort_cells_by_label_count(cells)
+    render_request_mosaic(
+        cells_by_label,
+        f"Request mosaic, grouped by label (each of {GRID_CELLS} squares ≈ 1/{GRID_CELLS} of requests)",
+        "request_mosaic_sorted", save_dir,
+    )
 
 
 def main():
