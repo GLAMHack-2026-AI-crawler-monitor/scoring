@@ -1,3 +1,7 @@
+# GLAMhack2026 - Crawler Monitor for Institutional Repositories
+
+This project was developed as part of the GLAMhack 2026 challenge “Crawler Monitor for Institutional Repositories”. You can find more information on the project pitch website: https://hack.glam.opendata.ch/project/335
+
 # Web server access log user/bot scoring
 
 Scores every IP address in a web access log (CSV) for bot-like behaviour.
