@@ -73,7 +73,9 @@ Plot.plot({
 })
 ```
 
-## Requests vs. score
+## Requests vs. score correlation
+
+The scatter plot shows the correlation between the amount of requests from one IP address and the score within the scoring system. It becomes evident again, that singular traits of human-like-behaviour can assign bots, which are only scanning for vulnarabilities, a good score of 1. To further distinguish those bots from humans the other four behavioural elements from the scoring system become relevant. For details see documentation of the scoring system on GitHub (https://github.com/bot-detection/scoring).
 
 ```js
 // Large datasets (hundreds of thousands of IPs) render as a random sample
