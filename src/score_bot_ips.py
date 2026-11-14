@@ -17,7 +17,7 @@ Expected CSV columns (edit COLUMNS below if yours are named differently):
   ip, path, status, user_agent, referrer
 
 Usage:
-  python src/score_bot_ips.py crawler_monitor_sample_logs.csv
+  python src/score_bot_ips.py reference_log_sample.csv
   python src/score_bot_ips.py logs.csv --out ip_scores.csv --top 30
   python src/score_bot_ips.py logs.csv --verify-dns     # also check claimed crawlers via DNS
 

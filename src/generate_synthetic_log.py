@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 generate_synthetic_log.py - build a larger synthetic access log by resampling
-crawler_monitor_sample_logs.csv, for stress-testing score_bot_ips.py at
+reference_log_sample.csv, for stress-testing score_bot_ips.py at
 realistic data volumes (e.g. ~1 GB).
 
 Each repeat resamples all rows with replacement and shifts the last IP octet,
@@ -35,7 +35,7 @@ def build(base_path, target_bytes, seed):
 
 def main():
     p = argparse.ArgumentParser(description="Generate a larger synthetic access log for stress-testing.")
-    p.add_argument("--base", default="crawler_monitor_sample_logs.csv", help="base CSV to resample from")
+    p.add_argument("--base", default="reference_log_sample.csv", help="base CSV to resample from")
     p.add_argument("--out", default="synthetic_stress_log.csv", help="output CSV path")
     p.add_argument("--target-bytes", type=int, default=1_100_000_000, help="approximate output file size in bytes")
     p.add_argument("--seed", type=int, default=0, help="random seed")

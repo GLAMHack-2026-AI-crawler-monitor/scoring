@@ -65,3 +65,16 @@ npm install
 npm run dev      # preview at http://localhost:3000, live-reloads
 npm run build     # static site in dashboard/dist/
 ```
+
+## Developer tools
+
+`generate_synthetic_log.py` blows up a small base access-log CSV into a much
+larger synthetic one, for stress-testing `score_bot_ips.py` at realistic data
+volumes (e.g. ~1 GB). It resamples the base rows with replacement and shifts
+the last IP octet on each repeat, so the result has more unique IPs than a
+plain concatenation would — a harder, more realistic case for the per-IP
+grouping than just repeating the same addresses.
+
+```bash
+python3 src/generate_synthetic_log.py --base data/synthetic_log_sample.csv --out data/synthetic_stress_log.csv --target-bytes 1100000000
+```

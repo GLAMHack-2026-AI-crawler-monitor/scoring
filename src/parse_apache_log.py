@@ -10,7 +10,7 @@ Usage:
   python3 src/parse_apache_log.py web_server_access.log.anonimized --out data/real_access_log.csv
 
 Output columns: row_id, timestamp, ip, method, path, status, bytes_sent, user_agent, referrer
-(matches crawler_monitor_sample_logs.csv, so no COLUMNS edit is needed in score_bot_ips.py).
+(matches reference_log_sample.csv, so no COLUMNS edit is needed in score_bot_ips.py).
 """
 import argparse
 import csv
