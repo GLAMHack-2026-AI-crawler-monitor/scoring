@@ -7,8 +7,7 @@
 !data/synthetic_log_sample.csv
 !data/ip_scores_sample.csv
 
-# dashboard source (node_modules, dist and the .observablehq cache stay
-# ignored since they still match the blanket "*" above)
+# dashboard source
 !dashboard
 !dashboard/package.json
 !dashboard/package-lock.json
@@ -18,3 +17,5 @@
 !dashboard/docs/datasets.js
 !dashboard/docs/data
 !dashboard/docs/data/ip_scores_sample.csv
+dashboard/node_modules/
+dashboard/docs/.observablehq/
