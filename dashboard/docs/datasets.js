@@ -13,12 +13,12 @@ import {FileAttachment} from "npm:@observablehq/stdlib";
 export const DATASETS = [
   {
     id: "sample",
-    label: "Synthetic stress-test sample (999 requests, 120 IPs)",
+    label: "Synthetic_data_stress_test_sample_(999_requests_and_120_IP_adresses)",
     file: FileAttachment("data/ip_scores_sample.csv")
   },
   {
     id: "crawler_monitor_sample",
-    label: "GLAMhack crawler-monitor sample, fixed IP ranges (14,599 requests, 157 IPs)",
+    label: "GLAMhack_anonymized_data_sample_with_fixed_IP_ranges_(14599_requests_and _157_IP_adresses)",
     file: FileAttachment("data/ip_scores_crawler_monitor_sample.csv")
   }
 ];
