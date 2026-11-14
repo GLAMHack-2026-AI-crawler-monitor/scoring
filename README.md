@@ -62,11 +62,28 @@ list from `dashboard/docs/datasets.js`, which lists `data/ip_scores_sample.csv`
 crawler-monitor sample log in `data/crawler_monitor_sample_logs_synthetic_generated with Claude_fixed.csv`,
 see `data/README_Datensatz_synthetic_sample_log.md`).
 
+Move into the dashboard directory:
+
 ```bash
 cd dashboard
+```
+
+Install dependencies:
+
+```bash
 npm install
-npm run dev      # preview at http://localhost:3000, live-reloads
-npm run build     # static site in dashboard/dist/
+```
+
+Start a live-reloading preview server at http://localhost:3000:
+
+```bash
+npm run dev
+```
+
+Build the static site into `dashboard/dist/`:
+
+```bash
+npm run build
 ```
 
 ## Developer tools
