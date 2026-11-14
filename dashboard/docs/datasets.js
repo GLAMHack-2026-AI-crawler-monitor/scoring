@@ -15,5 +15,10 @@ export const DATASETS = [
     id: "sample",
     label: "Synthetic stress-test sample (999 requests, 120 IPs)",
     file: FileAttachment("data/ip_scores_sample.csv")
+  },
+  {
+    id: "crawler_monitor_sample",
+    label: "GLAMhack crawler-monitor sample, fixed IP ranges (14,599 requests, 157 IPs)",
+    file: FileAttachment("data/ip_scores_crawler_monitor_sample.csv")
   }
 ];
