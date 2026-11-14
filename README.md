@@ -2,6 +2,8 @@
 
 Scores every IP address in a web access log (CSV) for bot-like behaviour.
 
+Browse the demo datasets in the live demo dashboard: [bot-detection.github.io/scoring/](https://bot-detection.github.io/scoring/)  
+
 ## Quick start
 
 ```bash
@@ -88,8 +90,9 @@ npm run build
 
 Pushes to `main` automatically build and publish the dashboard to GitHub
 Pages via [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml), at
-`https://bot-detection.github.io/scoring/` (once Pages is enabled with
-"GitHub Actions" as the source under the repo's Settings → Pages).
+[bot-detection.github.io/scoring/](https://bot-detection.github.io/scoring/)
+(once Pages is enabled with "GitHub Actions" as the source under the repo's
+Settings → Pages).
 
 ## Developer tools
 
