@@ -36,7 +36,7 @@ const scores = loaded.get(datasetId).map((d) => ({...d, label: RAW_TO_LABEL[d.la
 // dataset — so leaving this to each Plot call's automatic inference would
 // reassign colours depending on which labels happen to be present).
 const LABEL_DOMAIN = ["regular bots", "suspicious", "well meaning bots & humans", "bots scanning for vulnerabilities"];
-const LABEL_COLORS = ["#e15759", "#f28e2b", "#59a14f", "#bab0ac"];
+const LABEL_COLORS = ["#F60000", "#f28e2b", "#74c3ed", "#7f0000"];
 const labelColor = d3.scaleOrdinal(LABEL_DOMAIN, LABEL_COLORS);
 ```
 
