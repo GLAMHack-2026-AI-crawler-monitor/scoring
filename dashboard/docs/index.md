@@ -40,7 +40,7 @@ const LABEL_COLORS = ["#F60000", "#f28e2b", "#74c3ed", "#7f0000"];
 const labelColor = d3.scaleOrdinal(LABEL_DOMAIN, LABEL_COLORS);
 ```
 
-# Bot scoring
+# Request scoring system
 
 ```js
 const total = scores.length;
