@@ -19,3 +19,4 @@
 !dashboard/docs/data/ip_scores_sample.csv
 dashboard/node_modules/
 dashboard/docs/.observablehq/
+dashboard/dist/
