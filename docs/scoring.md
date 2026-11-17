@@ -3,24 +3,25 @@
 Reading from a web access log,  each IP address is granted a 
 **score from 0 to 5** and a **label** (*likely bot*, *suspicious*, *too few requests*, *likely human / well-behaved bot*). 
 
-- [1. The idea](#1-the-idea)
-- [2. The five warning signs](#2-the-five-warning-signs)
+- [1. Labeling the requests](#1-labeling-the-requests)
+- [2. The five behaviours](#2-the-five-behaviours)
 - [3. "Enough requests"](#3-enough-requests)
 - [4. From score to label](#4-from-score-to-label)
 - [5. Settings you can change](#5-settings-you-can-change)
 
-## 1. The idea
+## 1. Labeling the requests
 
-For each IP address, the script checks five **warning signs**. Each one is
-either present (1 point) or absent (0 points). The **score is the number of
-warning signs that fired**, so it is always a whole number from 0 to 5.
+The web server handles requests, each of which comes from a computer with an IP address.  
+Looking at the requests, a flag is raised on the IP for each of five behaviours.  
+The score is the number of flags that were raised.  
+As each flag is either absent or present, the score is always a whole number from 0 to 5.
 
-The score is a count of suspicious behaviours, not a probability. All signs have
-the same weight.
+The score is a count of suspicious behaviours, not a probability.  
+All behaviours have the same weight.
 
-## 2. The five warning signs
+## 2. The five behaviours
 
-| # | Column | Name | Fires when… | Needs enough requests? |
+| # | Column | Name | Flag raised when… | Needs enough requests? |
 |---|--------|------|-------------|------------------------|
 | 1 | `flag_ua` | Suspicious or fake robot name tag | any of the user-agent checks below is true | no |
 | 2 | `flag_long` | Absurdly long requests | at least **2** requests have more than **10** query parameters, or a URL longer than **1000** characters | no |
@@ -28,9 +29,9 @@ the same weight.
 | 4 | `flag_slowdown` | Ignores "slow down" | more than **5 %** of its requests got HTTP **429** or **503** | yes |
 | 5 | `flag_onething` | Does almost only one thing | more than **80 %** of its requests are the same kind of page (first path segment, e.g. `bitstream`, `search`, `discover`) | yes |
 
-### Sign 1 in detail: the user-agent checks
+### Flag 1 in detail: the user-agent checks
 
-Sign 1 groups several checks. **Any one of them** is enough to give the point,
+Flag 1 groups several checks. **Any one of them** is enough to give the point,
 and several of them together still give only **one** point.
 
 | Check | True when |
@@ -42,17 +43,17 @@ and several of them together still give only **one** point.
 | DNS failure | only with `--verify-dns`: the IP claims to be Googlebot, Bingbot, Applebot, Yandexbot or Baiduspider, but forward-confirmed reverse DNS does not match |
 
 The `reasons` column of the output CSV lists, in plain language, which checks
-and signs fired for each IP.
+and flags were raised for each IP.
 
 ## 3. "Enough requests"
 
-An IP needs at least **10 requests** (`--min-requests`) before signs 3, 4 and 5
+An IP needs at least **10 requests** (`--min-requests`) before flags 3, 4 and 5
 are counted. Without this rule, an IP that made a single request without a
 referrer would look like a bot.
 
-Signs 1 and 2 are counted for any IP, whatever its number of requests.
+Flags 1 and 2 are counted for any IP, whatever its number of requests.
 
-Consequence: an IP with too few requests can score **at most 2** (signs 1 and
+Consequence: an IP with too few requests can score **at most 2** (flags 1 and
 2). A score of 3 or more is only possible for an IP with enough requests.
 
 ## 4. From score to label
@@ -124,14 +125,14 @@ All thresholds are command-line options of `score_bot_ips.py`:
 
 | Option | Default | Used by |
 |--------|---------|---------|
-| `--min-requests` | 10 | "enough requests" (signs 3, 4, 5 and the `too few requests` label) |
-| `--max-params` | 10 | sign 2: query parameters per request |
-| `--max-url-len` | 1000 | sign 2: URL length in characters |
-| `--long-min-count` | 2 | sign 2: how many long requests are needed |
-| `--slowdown-share` | 0.05 | sign 4: share of 429 / 503 replies |
-| `--onething-share` | 0.80 | sign 5: share of requests of one page type |
-| `--robots-min-requests` | 50 | sign 1: crawler requests before a missing `robots.txt` read counts |
-| `--verify-dns` | off | sign 1: adds the reverse-DNS check |
+| `--min-requests` | 10 | "enough requests" (flags 3, 4, 5 and the `too few requests` label) |
+| `--max-params` | 10 | flag 2: query parameters per request |
+| `--max-url-len` | 1000 | flag 2: URL length in characters |
+| `--long-min-count` | 2 | flag 2: how many long requests are needed |
+| `--slowdown-share` | 0.05 | flag 4: share of 429 / 503 replies |
+| `--onething-share` | 0.80 | flag 5: share of requests of one page type |
+| `--robots-min-requests` | 50 | flag 1: crawler requests before a missing `robots.txt` read counts |
+| `--verify-dns` | off | flag 1: adds the reverse-DNS check |
 
 The score-to-label thresholds (3 and 2) are in the `np.select` call at the end
 of `score_ips()`. If you change them, update section 4 to match.

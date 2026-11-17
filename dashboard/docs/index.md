@@ -42,7 +42,7 @@ const labelColor = d3.scaleOrdinal(LABEL_DOMAIN, LABEL_COLORS);
 
 # Request scoring system
 
-In order to know if an institutional website was requested by a human, a well meaning bot, a regular bot, or a bad bot just looking for vulnerabilities, every IP address in a web access log was scored for those four behaviour types.
+In order to know if an institutional website was requested by a human, a well meaning bot, a regular bot, or a bad bot just looking for vulnerabilities, every IP address in a web access log was scored for those four behaviour types. See [How the score works](/scoring) for the full details of how the score and label are computed.
 
 ```js
 const total = scores.length;
@@ -75,7 +75,7 @@ Plot.plot({
 
 ## Requests vs. score correlation
 
-The scatter plot shows the correlation between the amount of requests from one IP address and the score within the scoring system. It becomes evident again, that singular traits of human-like-behaviour can assign bots, which are only scanning for vulnarabilities, a good score of 1. To further distinguish those bots from humans the other four behavioural elements from the scoring system become relevant. For details see documentation of the scoring system on GitHub (https://github.com/bot-detection/scoring).
+The scatter plot shows the correlation between the amount of requests from one IP address and the score within the scoring system. It becomes evident again, that singular traits of human-like-behaviour can assign bots, which are only scanning for vulnarabilities, a good score of 1. To further distinguish those bots from humans the other four behavioural elements from the scoring system become relevant. For details see [How the score works](/scoring).
 
 ```js
 // Large datasets (hundreds of thousands of IPs) render as a random sample
